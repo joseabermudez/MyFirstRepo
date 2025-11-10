@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Welcome to my first branch!</title>
+    <style>
+        :root{
+            --bg:#0f1724;
+            --card:#0b1220;
+            --muted:#94a3b8;
+            --accent:#7c3aed;
+            --glass: rgba(255,255,255,0.03);
+        }
+        html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:linear-gradient(180deg,var(--bg),#081223 60%);
+            color:#e6eef8;
+            padding:2rem;
+        }
+        .card{
+            width:min(760px,94vw);
+            background:linear-gradient(180deg,var(--card),var(--glass));
+            border-radius:12px;
+            padding:28px;
+            box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+            display:grid;
+            grid-template-columns: 1fr 220px;
+            gap:20px;
+            align-items:center;
+        }
+        h1{margin:0 0 8px 0;font-size:1.6rem;letter-spacing:-0.2px}
+        p{margin:0;color:var(--muted)}
+        .meta{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;color:#cfe3ff}
+        .branch-badge{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            justify-content:center;
+            flex-direction:column;
+        }
+        .branch{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            background:linear-gradient(90deg,rgba(124,58,237,0.15),rgba(99,102,241,0.07));
+            padding:10px 14px;border-radius:999px;font-weight:600;color:var(--accent);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+        }
+        .hint{font-size:0.85rem;color:var(--muted);text-align:center;margin-top:8px}
+        footer{grid-column:1/-1;text-align:center;margin-top:12px;color:rgba(255,255,255,0.06);font-size:12px}
+        @media (max-width:640px){
+            .card{grid-template-columns:1fr; text-align:center}
+        }
+    </style>
+</head>
+<body>
+    <main class="card" role="main">
+        <section>
+            <h1>Welcome to my first branch!</h1>
+            <p class="meta">This is a simple branch demonstration page. Use this file to preview or verify your branch in the repository.</p>
+            <div style="height:12px"></div>
+            <p class="hint">File path: <span style="font-family:ui-monospace,monospace;background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:6px;margin-left:8px;">/C:/Users/Bermu/source/repos/MyFirstRepo/branch.html</span></p>
+        </section>
+
+        <aside class="branch-badge" aria-hidden="true">
+            <div class="branch" title="current branch">
+                <!-- simple branch icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 7a2 2 0 100-4 2 2 0 000 4z" fill="currentColor" opacity="0.9"/>
+                    <path d="M7 21a2 2 0 100-4 2 2 0 000 4z" fill="currentColor" opacity="0.9"/>
+                    <path d="M17 12a2 2 0 100-4 2 2 0 000 4z" fill="currentColor" opacity="0.9"/>
+                    <path d="M7 7v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M8.5 8.5c3 0 6.5-1 8.5 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                my-first-branch
+            </div>
+            <div class="hint">Preview changes here to confirm your branch content</div>
+        </aside>
+
+        <footer>Tip: Commit and push this file to see it in your remote branch preview.</footer>
+    </main>
+</body>
+</html></svg>
