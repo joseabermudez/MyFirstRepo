@@ -1,0 +1,41 @@
+<!-- When button text must be short but needs more context -->
+<a href="/report.pdf" 
+   aria-label="Download 2024 annual financial report, PDF format, 2.3MB">
+  Download Report
+</a>
+
+<!-- When the full context comes from surrounding content -->
+<h3 id="sustainability-heading">Sustainability Initiative</h3>
+<p>Our efforts to reduce environmental impact...</p>
+<a href="/sustainability-details" 
+   aria-labelledby="sustainability-heading"
+   aria-describedby="sustainability-summary">
+  Learn more
+</a>
+<p id="sustainability-summary">Detailed breakdown of our 2024 environmental goals and achievements</p>
+
+<!-- Method 1: Include information in visible link text -->
+<a href="/annual-report.pdf">
+  Download our 2024 annual report (PDF, 2.3MB)
+</a>
+
+<!-- Method 2: Use screen reader-only text for file details -->
+<a href="/annual-report.pdf">
+  Download our 2024 annual report
+  <span class="sr-only">(PDF format, 2.3MB)</span>
+</a>
+
+<!-- Method 3: External link indication -->
+<a href="https://example.com" 
+   target="_blank" 
+   aria-describedby="external-link-warning">
+  Visit external resource
+</a>
+<span id="external-link-warning" class="sr-only">
+  (opens in new window)
+</span>
+
+<!-- Method 4: Using CSS for visual indicators -->
+<a href="https://example.com" class="external-link">
+  External resource
+</a>
